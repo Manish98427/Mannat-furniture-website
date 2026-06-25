@@ -1,0 +1,7 @@
+mannat-site/
+├── index.html           ← drag this
+├── netlify.toml         ← drag this
+├── admin/
+│   ├── index.html       ← drag this
+│   └── config.yml       ← drag this
+└── content/             ← drag this whole folder
