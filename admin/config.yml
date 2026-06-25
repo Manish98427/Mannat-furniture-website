@@ -1,7 +1,94 @@
-mannat-site/
-├── index.html           ← drag this
-├── netlify.toml         ← drag this
-├── admin/
-│   ├── index.html       ← drag this
-│   └── config.yml       ← drag this
-└── content/             ← drag this whole folder
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Product Name", name: "title", widget: "string" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Living Room", value: "living-room" }
+          - { label: "Bedroom", value: "bedroom" }
+          - { label: "Dining & Kitchen", value: "dining" }
+          - { label: "Hotel & Resort", value: "hotel" }
+          - { label: "Restaurant & Cafe", value: "restaurant" }
+          - { label: "Office & Study", value: "office" }
+          - { label: "Outdoor", value: "outdoor" }
+          - { label: "Custom", value: "custom" }
+      - { label: "Product Photo", name: "image", widget: "image", required: false }
+      - { label: "Price (NPR)", name: "price", widget: "string" }
+      - { label: "Price Note", name: "price_note", widget: "string", default: "onwards" }
+      - { label: "Material", name: "material", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Badge"
+        name: "badge"
+        widget: "select"
+        required: false
+        options:
+          - { label: "None", value: "" }
+          - { label: "New", value: "New" }
+          - { label: "Bestseller", value: "Bestseller" }
+          - { label: "Hotel Grade", value: "Hotel Grade" }
+          - { label: "Sale", value: "Sale" }
+      - { label: "Featured on Homepage?", name: "featured", widget: "boolean", default: true }
+      - { label: "Available?", name: "available", widget: "boolean", default: true }
+
+  - name: "settings"
+    label: "Company Settings"
+    files:
+      - label: "Company Info"
+        name: "company"
+        file: "content/settings/company.json"
+        fields:
+          - { label: "Company Name", name: "name", widget: "string" }
+          - { label: "Phone / WhatsApp", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address Line 1", name: "address1", widget: "string" }
+          - { label: "Address Line 2", name: "address2", widget: "string" }
+          - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+          - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+
+  - name: "testimonials"
+    label: "Customer Reviews"
+    folder: "content/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Customer Name", name: "name", widget: "string" }
+      - { label: "Location or Business", name: "location", widget: "string" }
+      - { label: "Review Text", name: "text", widget: "text" }
+      - label: "Star Rating"
+        name: "rating"
+        widget: "select"
+        options: ["5", "4", "3"]
+        default: "5"
+
+  - name: "projects"
+    label: "Projects Portfolio"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Name", name: "title", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - label: "Project Type"
+        name: "type"
+        widget: "select"
+        options:
+          - { label: "Hotel", value: "hotel" }
+          - { label: "Resort", value: "resort" }
+          - { label: "Home", value: "home" }
+          - { label: "Restaurant", value: "restaurant" }
+          - { label: "Office", value: "office" }
+      - { label: "Photo", name: "image", widget: "image", required: false }
