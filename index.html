@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mannat Furniture | Handcrafted Furniture – Damak, Jhapa, Nepal</title>
+  <meta name="description" content="Mannat Furniture – Premium handcrafted furniture by Manish &amp; Manoj Panday, Damak, Jhapa, Nepal. Custom furniture for homes, hotels, resorts, restaurants &amp; offices. Delivering all across Nepal."/>
+  <meta name="keywords" content="furniture Nepal, furniture Jhapa, furniture Damak, hotel furniture Nepal, custom furniture Nepal, Mannat Furniture"/>
+  <meta property="og:title" content="Mannat Furniture | Damak, Jhapa, Nepal"/>
+  <meta property="og:description" content="Handcrafted furniture for homes, hotels, resorts &amp; restaurants. Founded by Manish &amp; Manoj Panday in Damak, Jhapa."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest: #1B3A2D;
+      --forest-light: #2A5241;
+      --walnut: #8B5E3C;
+      --walnut-light: #A97850;
+      --cream: #F7F2E8;
+      --sand: #E8DFD0;
+      --sand-dark: #D4C8B5;
+      --white: #FFFFFF;
+      --text-dark: #1A1A18;
+      --text-mid: #4A4A42;
+      --text-light: #7A7A70;
+      --gold: #C8A85A;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text-dark); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      background: var(--forest);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 64px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo-icon {
+      width: 40px; height: 40px; background: var(--gold);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon svg { width: 24px; height: 24px; fill: var(--forest); }
+    .nav-logo-text { color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.02em; }
+    .nav-logo-sub { color: var(--sand-dark); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: -2px; }
+
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.82); text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.03em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-actions { display: flex; align-items: center; gap: 16px; }
+    .nav-btn {
+      background: var(--gold); color: var(--forest); border: none; cursor: pointer;
+      padding: 8px 20px; border-radius: 4px; font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.04em; text-transform: uppercase; transition: background 0.2s;
+    }
+    .nav-btn:hover { background: var(--walnut-light); color: var(--white); }
+    .nav-icon-btn { background: none; border: none; cursor: pointer; color: rgba(255,255,255,0.7); font-size: 1.1rem; padding: 4px; transition: color 0.2s; }
+    .nav-icon-btn:hover { color: var(--gold); }
+
+    /* ── HERO ── */
+    .hero {
+      margin-top: 64px;
+      height: calc(100vh - 64px);
+      min-height: 560px;
+      position: relative;
+      overflow: hidden;
+      background: var(--forest);
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(135deg, rgba(27,58,45,0.92) 0%, rgba(27,58,45,0.6) 50%, rgba(139,94,60,0.5) 100%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+      background-size: cover;
+    }
+    /* Wood grain accent bars */
+    .hero-grain {
+      position: absolute; right: 0; top: 0; bottom: 0; width: 42%;
+      background: linear-gradient(160deg, #7A4E28 0%, #5C3416 30%, #3D2010 60%, #2A1508 100%);
+      clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .hero-grain::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        168deg,
+        transparent 0px, transparent 3px,
+        rgba(255,255,255,0.03) 3px, rgba(255,255,255,0.03) 4px
+      );
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      height: 100%; display: flex; flex-direction: column;
+      justify-content: center; padding: 0 80px;
+      max-width: 620px;
+    }
+    .hero-eyebrow {
+      color: var(--gold); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+      font-weight: 700; line-height: 1.08;
+      color: var(--white); margin-bottom: 12px;
+    }
+    .hero-title em { color: var(--gold); font-style: italic; }
+    .hero-nepali {
+      font-size: 1.1rem; color: rgba(255,255,255,0.5);
+      letter-spacing: 0.05em; margin-bottom: 28px;
+    }
+    .hero-desc {
+      color: rgba(255,255,255,0.75); font-size: 1rem; line-height: 1.7;
+      max-width: 440px; margin-bottom: 40px;
+    }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold); color: var(--forest);
+      padding: 14px 32px; border: none; border-radius: 4px; cursor: pointer;
+      font-size: 0.9rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+      text-decoration: none; display: inline-block; transition: all 0.2s;
+    }
+    .btn-primary:hover { background: var(--walnut-light); color: var(--white); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent; color: var(--white);
+      padding: 13px 32px; border: 1.5px solid rgba(255,255,255,0.4); border-radius: 4px; cursor: pointer;
+      font-size: 0.9rem; font-weight: 500; letter-spacing: 0.04em;
+      text-decoration: none; display: inline-block; transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-scroll {
+      position: absolute; bottom: 36px; left: 80px; z-index: 2;
+      display: flex; align-items: center; gap: 10px;
+      color: rgba(255,255,255,0.4); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .scroll-line { width: 40px; height: 1px; background: rgba(255,255,255,0.3); }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--sand);
+      padding: 20px 48px;
+      display: flex; align-items: center; justify-content: center; gap: 60px;
+      flex-wrap: wrap;
+    }
+    .trust-item { display: flex; align-items: center; gap: 10px; }
+    .trust-icon { font-size: 1.3rem; }
+    .trust-text { font-size: 0.82rem; font-weight: 600; color: var(--text-mid); letter-spacing: 0.04em; text-transform: uppercase; }
+
+    /* ── SECTION COMMONS ── */
+    section { padding: 80px 48px; }
+    .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--walnut); margin-bottom: 12px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--text-dark); line-height: 1.15; }
+    .section-title em { color: var(--forest); font-style: italic; }
+    .section-sub { color: var(--text-mid); font-size: 1rem; line-height: 1.7; max-width: 540px; margin-top: 14px; }
+
+    /* ── CATEGORIES ── */
+    .categories { background: var(--white); }
+    .categories-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; }
+    .see-all { color: var(--forest); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; text-decoration: none; border-bottom: 1.5px solid var(--forest); padding-bottom: 2px; transition: color 0.2s; }
+    .see-all:hover { color: var(--walnut); border-color: var(--walnut); }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      gap: 16px;
+    }
+    .cat-card {
+      position: relative; overflow: hidden; border-radius: 6px; cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .cat-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.14); }
+    .cat-card.tall { grid-row: span 2; }
+    .cat-card.wide { grid-column: span 2; }
+
+    .cat-img {
+      width: 100%; height: 100%; min-height: 200px;
+      display: flex; align-items: flex-end;
+      padding: 24px;
+    }
+    .cat-card.tall .cat-img { min-height: 440px; }
+    .cat-card.wide .cat-img { min-height: 220px; }
+
+    .cat-info { position: relative; z-index: 2; }
+    .cat-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700; color: var(--white);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .cat-count { font-size: 0.78rem; color: rgba(255,255,255,0.75); margin-top: 2px; }
+    .cat-arrow {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(255,255,255,0.15); color: white;
+      margin-top: 8px; font-size: 0.9rem; transition: background 0.2s;
+    }
+    .cat-card:hover .cat-arrow { background: var(--gold); color: var(--forest); }
+
+    /* Category color themes */
+    .cat-living   { background: linear-gradient(160deg, #3D2B1F 0%, #6B4226 50%, #8B5E3C 100%); }
+    .cat-bedroom  { background: linear-gradient(160deg, #1B2E3A 0%, #2A4A5C 50%, #3D6678 100%); }
+    .cat-hotel    { background: linear-gradient(160deg, #2A1F1A 0%, #4A3020 50%, #6B4830 100%); }
+    .cat-dining   { background: linear-gradient(160deg, #1E2A1A 0%, #2D4226 40%, #3D5A32 100%); }
+    .cat-office   { background: linear-gradient(160deg, #252520 0%, #3A3A32 50%, #52524A 100%); }
+    .cat-outdoor  { background: linear-gradient(160deg, #1A2A1E 0%, #2A4230 50%, #3C5E42 100%); }
+    .cat-custom   { background: linear-gradient(160deg, #3A2010 0%, #6B3818 50%, #8B5228 100%); }
+
+    /* ── SHOWCASE / HERO BANNER ── */
+    .showcase {
+      background: var(--cream); padding: 0;
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 500px;
+    }
+    .showcase-visual {
+      background: linear-gradient(145deg, #5C3D28 0%, #3D2518 50%, #2A1A10 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .showcase-visual-inner {
+      text-align: center; padding: 60px;
+    }
+    .showcase-badge {
+      width: 120px; height: 120px; border-radius: 50%;
+      border: 2px solid var(--gold); color: var(--gold);
+      display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; margin-bottom: 32px;
+    }
+    .badge-num { font-size: 2rem; font-weight: 700; line-height: 1; }
+    .badge-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .showcase-visual h2 {
+      font-family: 'Playfair Display', serif; font-size: 2.2rem;
+      color: var(--white); line-height: 1.2;
+    }
+    .showcase-visual h2 em { color: var(--gold); font-style: italic; }
+    .showcase-visual p { color: rgba(255,255,255,0.65); margin-top: 16px; line-height: 1.7; }
+
+    .showcase-content { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
+    .showcase-content .section-label { margin-bottom: 12px; }
+    .showcase-features { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+    .feat-item { display: flex; gap: 16px; align-items: flex-start; }
+    .feat-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--forest); border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .feat-text h4 { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+    .feat-text p { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
+
+    /* ── PRODUCTS ── */
+    .products { background: var(--white); }
+    .products-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; }
+
+    .filter-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px; }
+    .filter-tab {
+      padding: 8px 20px; border-radius: 24px; border: 1.5px solid var(--sand-dark);
+      background: none; cursor: pointer; font-size: 0.82rem; font-weight: 500;
+      color: var(--text-mid); transition: all 0.2s;
+    }
+    .filter-tab.active, .filter-tab:hover {
+      background: var(--forest); border-color: var(--forest); color: var(--white);
+    }
+
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .product-card {
+      background: var(--cream); border-radius: 6px; overflow: hidden; cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+    .product-thumb {
+      height: 220px; position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .product-thumb-inner { width: 100%; height: 100%; }
+    .prod-tag {
+      position: absolute; top: 12px; left: 12px;
+      background: var(--forest); color: var(--white);
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 3px;
+    }
+    .prod-tag.new { background: var(--gold); color: var(--forest); }
+    .prod-wishlist {
+      position: absolute; top: 12px; right: 12px;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(255,255,255,0.9); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; transition: background 0.2s;
+    }
+    .prod-wishlist:hover { background: var(--white); }
+
+    .product-info { padding: 16px 18px 20px; }
+    .prod-category { font-size: 0.72rem; color: var(--text-light); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+    .prod-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; }
+    .prod-mat { font-size: 0.8rem; color: var(--text-light); margin-bottom: 12px; }
+    .prod-footer { display: flex; justify-content: space-between; align-items: center; }
+    .prod-price { font-weight: 700; font-size: 1rem; color: var(--forest); }
+    .prod-price span { font-size: 0.75rem; font-weight: 400; color: var(--text-light); }
+    .prod-add {
+      background: var(--forest); color: var(--white); border: none;
+      width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+      font-size: 1.1rem; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .prod-add:hover { background: var(--walnut); }
+
+    /* Product thumb illustrations */
+    .pt-sofa { background: linear-gradient(145deg, #D4C8B5 0%, #E8DFD0 100%); }
+    .pt-bed { background: linear-gradient(145deg, #C8D4E0 0%, #DDEAF5 100%); }
+    .pt-table { background: linear-gradient(145deg, #D4C4A8 0%, #E8D8BC 100%); }
+    .pt-chair { background: linear-gradient(145deg, #C4CCC8 0%, #D8E4DC 100%); }
+    .pt-wardrobe { background: linear-gradient(145deg, #D0C4B4 0%, #E4D8C8 100%); }
+    .pt-hotel { background: linear-gradient(145deg, #C8C0B0 0%, #DED6C6 100%); }
+    .pt-office { background: linear-gradient(145deg, #C8CCCC 0%, #DCE0E0 100%); }
+    .pt-outdoor { background: linear-gradient(145deg, #BCC8BC 0%, #D0DCC8 100%); }
+
+    /* ── WHY US ── */
+    .why-us { background: var(--forest); padding: 80px 48px; }
+    .why-us .section-label { color: var(--gold); }
+    .why-us .section-title { color: var(--white); }
+    .why-us .section-sub { color: rgba(255,255,255,0.65); }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 56px; }
+    .why-card {
+      border-top: 2px solid rgba(200,168,90,0.3);
+      padding-top: 28px;
+    }
+    .why-icon { font-size: 2rem; margin-bottom: 16px; }
+    .why-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--white); margin-bottom: 10px; }
+    .why-card p { font-size: 0.875rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+    /* ── PROJECTS / PORTFOLIO ── */
+    .projects { background: var(--cream); }
+    .proj-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 260px 260px; gap: 16px; margin-top: 48px; }
+    .proj-card {
+      border-radius: 6px; overflow: hidden; position: relative; cursor: pointer;
+    }
+    .proj-card.span-col { grid-column: span 1; }
+    .proj-card.span-row { grid-row: span 2; }
+
+    .proj-img { width: 100%; height: 100%; position: relative; overflow: hidden; }
+    .proj-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+      opacity: 0; transition: opacity 0.3s;
+      display: flex; align-items: flex-end; padding: 24px;
+    }
+    .proj-card:hover .proj-overlay { opacity: 1; }
+    .proj-info h4 { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.1rem; }
+    .proj-info span { font-size: 0.78rem; color: rgba(255,255,255,0.75); }
+
+    .pv-hotel   { background: linear-gradient(160deg, #2A3040 0%, #3D4860 80%); }
+    .pv-resort  { background: linear-gradient(160deg, #1E3028 0%, #2A4838 80%); }
+    .pv-home    { background: linear-gradient(160deg, #3A2818 0%, #5A3E28 80%); }
+    .pv-rest    { background: linear-gradient(160deg, #2C1E18 0%, #483028 80%); }
+    .pv-office2 { background: linear-gradient(160deg, #282830 0%, #3C3C48 80%); }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--white); padding: 80px 48px; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; }
+    .testi-card {
+      background: var(--cream); border-radius: 8px; padding: 32px;
+      border-left: 3px solid var(--gold);
+    }
+    .testi-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 16px; }
+    .testi-text { font-size: 0.925rem; line-height: 1.75; color: var(--text-mid); font-style: italic; margin-bottom: 20px; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--forest); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.9rem;
+    }
+    .testi-name { font-weight: 600; font-size: 0.875rem; }
+    .testi-loc { font-size: 0.78rem; color: var(--text-light); }
+
+    /* ── PROCESS ── */
+    .process { background: var(--sand); padding: 80px 48px; }
+    .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 56px; position: relative; }
+    .process-steps::before {
+      content: ''; position: absolute; top: 28px; left: 10%; right: 10%;
+      height: 1px; background: var(--sand-dark);
+    }
+    .step { text-align: center; padding: 0 16px; }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--forest); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700;
+      margin: 0 auto 20px; position: relative; z-index: 1;
+      border: 3px solid var(--sand);
+    }
+    .step h4 { font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; }
+    .step p { font-size: 0.8rem; color: var(--text-light); line-height: 1.6; }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      background: var(--walnut);
+      padding: 60px 80px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 24px;
+    }
+    .cta-strip h2 {
+      font-family: 'Playfair Display', serif; font-size: 2rem;
+      color: var(--white); max-width: 500px; line-height: 1.2;
+    }
+    .cta-strip h2 em { font-style: italic; color: var(--cream); }
+    .cta-strip-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-white {
+      background: var(--white); color: var(--walnut); border: none;
+      padding: 14px 32px; border-radius: 4px; cursor: pointer;
+      font-size: 0.9rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+      text-decoration: none; display: inline-block; transition: all 0.2s;
+    }
+    .btn-white:hover { background: var(--cream); transform: translateY(-1px); }
+    .btn-outline-white {
+      background: transparent; color: var(--white); text-decoration: none;
+      padding: 13px 32px; border: 1.5px solid rgba(255,255,255,0.5); border-radius: 4px;
+      font-size: 0.9rem; font-weight: 500; display: inline-block; transition: all 0.2s;
+    }
+    .btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--text-dark); color: rgba(255,255,255,0.7);
+      padding: 64px 48px 32px;
+    }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand .nav-logo-text { font-size: 1.5rem; display: block; color: var(--white); margin-bottom: 4px; }
+    .footer-brand p { font-size: 0.875rem; line-height: 1.7; margin-top: 16px; max-width: 280px; color: rgba(255,255,255,0.55); }
+    .footer-social { display: flex; gap: 12px; margin-top: 24px; }
+    .social-btn {
+      width: 36px; height: 36px; border-radius: 6px;
+      background: rgba(255,255,255,0.08); border: none; cursor: pointer;
+      color: rgba(255,255,255,0.6); font-size: 0.85rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s, color 0.2s;
+    }
+    .social-btn:hover { background: var(--gold); color: var(--forest); }
+
+    .footer-col h4 { font-weight: 600; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+    .footer-bottom-links { display: flex; gap: 24px; }
+    .footer-bottom-links a { font-size: 0.78rem; color: rgba(255,255,255,0.35); text-decoration: none; }
+
+    /* ── MOBILE NAV TOGGLE ── */
+    .hamburger { display: none; background: none; border: none; cursor: pointer; color: white; font-size: 1.4rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .cat-card.wide { grid-column: span 1; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .proj-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .proj-card.span-row { grid-row: span 1; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .testi-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      section { padding: 56px 24px; }
+      .hero-content { padding: 0 32px; }
+      .hero-scroll { left: 32px; }
+      .trust-bar { padding: 20px 24px; gap: 24px; }
+      .showcase { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .process-steps::before { display: none; }
+      .cta-strip { padding: 48px 32px; }
+      .footer-top { grid-template-columns: 1fr; }
+      .cat-card.tall .cat-img { min-height: 280px; }
+      .testi-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════ NAV ════ -->
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 19h20v2H2v-2zm1-9h18v7H3v-7zm2 2v3h14v-3H5zM1 8l11-6 11 6H1zm11-3.86L4.94 8h14.12L12 4.14z"/>
+      </svg>
+    </div>
+    <div>
+      <div class="nav-logo-text">Mannat Furniture</div>
+      <div class="nav-logo-sub">Damak, Jhapa · Nepal</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#categories">Collections</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#process">Our Process</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-icon-btn" title="Search">🔍</button>
+    <button class="nav-icon-btn" title="Wishlist">♡</button>
+    <button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Quote</button>
+    <button class="hamburger">☰</button>
+  </div>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Proudly Founded in Damak, Jhapa · Delivering All Nepal</div>
+    <h1 class="hero-title">Furniture Built to <em>Last a Lifetime</em></h1>
+    <p class="hero-nepali">मनको फर्निचर — मन्नत फर्निचर</p>
+    <p class="hero-desc">From intimate homes to grand hotels — every piece we craft carries the warmth of Nepali craftsmanship and the precision of modern design.</p>
+    <div class="hero-ctas">
+      <a href="#categories" class="btn-primary">Explore Collections</a>
+      <a href="#contact" class="btn-outline">Book a Consultation</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll to explore
+  </div>
+</section>
+
+<!-- ════ TRUST BAR ════ -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">🌲</span><span class="trust-text">Sustainably Sourced Wood</span></div>
+  <div class="trust-item"><span class="trust-icon">🛠️</span><span class="trust-text">Master Craftsmen</span></div>
+  <div class="trust-item"><span class="trust-icon">📐</span><span class="trust-text">Custom Dimensions</span></div>
+  <div class="trust-item"><span class="trust-icon">🚚</span><span class="trust-text">Delivery All Across Nepal</span></div>
+  <div class="trust-item"><span class="trust-icon">🏆</span><span class="trust-text">5-Year Warranty</span></div>
+</div>
+
+<!-- ════ CATEGORIES ════ -->
+<section class="categories" id="categories">
+  <div class="categories-header">
+    <div>
+      <div class="section-label">Browse by Space</div>
+      <h2 class="section-title">Every Room, Every <em>Vision</em></h2>
+    </div>
+    <a href="#" class="see-all">View All Collections →</a>
+  </div>
+  <div class="cat-grid">
+    <!-- Tall left card -->
+    <div class="cat-card tall">
+      <div class="cat-img cat-living" style="min-height:440px">
+        <div class="cat-info">
+          <div class="cat-name">Living Room</div>
+          <div class="cat-count">Sofas, Tables, Shelving</div>
+          <div class="cat-arrow">→</div>
+        </div>
+      </div>
+    </div>
+    <!-- Top right cards -->
+    <div class="cat-card">
+      <div class="cat-img cat-bedroom">
+        <div class="cat-info">
+          <div class="cat-name">Bedroom</div>
+          <div class="cat-count">Beds, Wardrobes, Side tables</div>
+          <div class="cat-arrow">→</div>
+        </div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-img cat-hotel">
+        <div class="cat-info">
+          <div class="cat-name">Hotels & Resorts</div>
+          <div class="cat-count">Bulk orders welcome</div>
+          <div class="cat-arrow">→</div>
+        </div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-img cat-dining">
+        <div class="cat-info">
+          <div class="cat-name">Dining & Kitchen</div>
+          <div class="cat-count">Tables, Chairs, Cabinets</div>
+          <div class="cat-arrow">→</div>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom right cards -->
+    <div class="cat-card">
+      <div class="cat-img cat-office">
+        <div class="cat-info">
+          <div class="cat-name">Office & Study</div>
+          <div class="cat-count">Desks, Cabinets, Bookshelves</div>
+          <div class="cat-arrow">→</div>
+        </div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-img cat-custom">
+        <div class="cat-info">
+          <div class="cat-name">Custom Orders</div>
+          <div class="cat-count">Design your own piece</div>
+          <div class="cat-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SHOWCASE ════ -->
+<div class="showcase">
+  <div class="showcase-visual">
+    <div class="showcase-visual-inner">
+      <div class="showcase-badge">
+        <div class="badge-num">10+</div>
+        <div class="badge-label">Years of Craft</div>
+      </div>
+      <h2>Crafted with <em>Heart</em>, Delivered with Pride</h2>
+      <p>From the forests of Nepal to your living space — every joint, every grain, every finish tells a story of dedication.</p>
+    </div>
+  </div>
+  <div class="showcase-content">
+    <div class="section-label">Why Mannat</div>
+    <h2 class="section-title" style="font-size:2rem;">Built Different, <em>Made to Last</em></h2>
+    <p class="section-sub" style="font-size:0.9rem;">We combine traditional Nepali woodworking techniques with contemporary design principles to create furniture that is both beautiful and enduring.</p>
+    <div class="showcase-features">
+      <div class="feat-item">
+        <div class="feat-icon">🌳</div>
+        <div class="feat-text">
+          <h4>Premium Local Timber</h4>
+          <p>We source Sal, Teak, and Rosewood from certified local suppliers, ensuring quality and sustainability.</p>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon">✏️</div>
+        <div class="feat-text">
+          <h4>In-House Design Team</h4>
+          <p>Our designers work closely with you to create pieces that perfectly match your space and vision.</p>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-icon">🏗️</div>
+        <div class="feat-text">
+          <h4>Complete Interior Solutions</h4>
+          <p>From a single sofa to a complete hotel fit-out — we handle projects of every scale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ PRODUCTS ════ -->
+<section class="products" id="products">
+  <div class="products-header">
+    <div>
+      <div class="section-label">Featured Products</div>
+      <h2 class="section-title">Our Latest <em>Pieces</em></h2>
+    </div>
+    <a href="#" class="see-all">View All Products →</a>
+  </div>
+  <div class="filter-tabs">
+    <button class="filter-tab active">All</button>
+    <button class="filter-tab">Living Room</button>
+    <button class="filter-tab">Bedroom</button>
+    <button class="filter-tab">Dining</button>
+    <button class="filter-tab">Hotel & Resort</button>
+    <button class="filter-tab">Office</button>
+    <button class="filter-tab">Custom</button>
+  </div>
+  <div class="product-grid">
+
+    <div class="product-card">
+      <div class="product-thumb pt-sofa">
+        <span class="prod-tag new">New</span>
+        <button class="prod-wishlist">♡</button>
+        <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" style="width:80%;height:auto;margin:auto">
+          <rect x="10" y="80" width="180" height="40" rx="8" fill="#8B5E3C" opacity="0.7"/>
+          <rect x="10" y="55" width="36" height="60" rx="8" fill="#6B4226"/>
+          <rect x="154" y="55" width="36" height="60" rx="8" fill="#6B4226"/>
+          <rect x="20" y="50" width="160" height="36" rx="8" fill="#A97850"/>
+          <rect x="20" y="112" width="20" height="12" rx="3" fill="#5C3416"/>
+          <rect x="160" y="112" width="20" height="12" rx="3" fill="#5C3416"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="prod-category">Living Room</div>
+        <div class="prod-name">Ashoka 3-Seat Sofa</div>
+        <div class="prod-mat">Teak frame · Premium fabric</div>
+        <div class="prod-footer">
+          <div class="prod-price">NPR 85,000 <span>onwards</span></div>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-thumb pt-bed">
+        <span class="prod-tag">Bestseller</span>
+        <button class="prod-wishlist">♡</button>
+        <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" style="width:80%;height:auto;margin:auto">
+          <rect x="10" y="70" width="180" height="50" rx="4" fill="#5C7A8C" opacity="0.8"/>
+          <rect x="10" y="60" width="180" height="20" rx="4" fill="#7096A8"/>
+          <rect x="16" y="36" width="50" height="36" rx="6" fill="#4A7290"/>
+          <rect x="80" y="36" width="50" height="36" rx="6" fill="#4A7290"/>
+          <rect x="10" y="90" width="180" height="10" rx="2" fill="#3D6278"/>
+          <rect x="10" y="112" width="16" height="16" rx="3" fill="#2A4A5C"/>
+          <rect x="174" y="112" width="16" height="16" rx="3" fill="#2A4A5C"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="prod-category">Bedroom</div>
+        <div class="prod-name">Himalayan King Bed</div>
+        <div class="prod-mat">Sal wood · Walnut finish</div>
+        <div class="prod-footer">
+          <div class="prod-price">NPR 1,20,000 <span>onwards</span></div>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-thumb pt-table">
+        <span class="prod-tag new">New</span>
+        <button class="prod-wishlist">♡</button>
+        <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" style="width:80%;height:auto;margin:auto">
+          <ellipse cx="100" cy="72" rx="80" ry="16" fill="#8B6240" opacity="0.85"/>
+          <rect x="20" y="72" width="160" height="8" rx="3" fill="#A07848"/>
+          <rect x="88" y="80" width="8" height="44" rx="3" fill="#6B4826"/>
+          <rect x="104" y="80" width="8" height="44" rx="3" fill="#6B4826"/>
+          <rect x="75" y="118" width="50" height="6" rx="3" fill="#5C3A1E"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="prod-category">Dining</div>
+        <div class="prod-name">Teesta Round Dining Table</div>
+        <div class="prod-mat">Rosewood · Natural oil finish</div>
+        <div class="prod-footer">
+          <div class="prod-price">NPR 55,000 <span>onwards</span></div>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-thumb pt-chair">
+        <span class="prod-tag">Hotel Grade</span>
+        <button class="prod-wishlist">♡</button>
+        <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" style="width:80%;height:auto;margin:auto">
+          <rect x="60" y="40" width="80" height="56" rx="12" fill="#7A8C7A" opacity="0.85"/>
+          <rect x="60" y="88" width="80" height="16" rx="4" fill="#5A7060"/>
+          <rect x="50" y="40" width="12" height="60" rx="6" fill="#4A5E4A"/>
+          <rect x="138" y="40" width="12" height="60" rx="6" fill="#4A5E4A"/>
+          <rect x="65" y="100" width="10" height="30" rx="4" fill="#3A4E3A"/>
+          <rect x="125" y="100" width="10" height="30" rx="4" fill="#3A4E3A"/>
+          <rect x="50" y="96" width="100" height="8" rx="4" fill="#6A807A"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="prod-category">Hotel & Resort</div>
+        <div class="prod-name">Grand Lobby Armchair</div>
+        <div class="prod-mat">Solid teak · Velvet upholstery</div>
+        <div class="prod-footer">
+          <div class="prod-price">NPR 38,000 <span>per unit</span></div>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-thumb pt-wardrobe">
+        <button class="prod-wishlist">♡</button>
+        <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" style="width:80%;height:auto;margin:auto">
+          <rect x="30" y="20" width="140" height="106" rx="4" fill="#9E8060"/>
+          <line x1="100" y1="20" x2="100" y2="126" stroke="#7A6040" stroke-width="2"/>
+          <circle cx="88" cy="75" r="5" fill="#5A4020"/>
+          <circle cx="112" cy="75" r="5" fill="#5A4020"/>
+          <rect x="30" y="118" width="60" height="8" rx="2" fill="#7A6040"/>
+          <rect x="110" y="118" width="60" height="8" rx="2" fill="#7A6040"/>
+          <rect x="30" y="20" width="140" height="8" rx="2" fill="#B09070"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="prod-category">Bedroom</div>
+        <div class="prod-name">Mango Wood Wardrobe</div>
+        <div class="prod-mat">Mango wood · Brass handles</div>
+        <div class="prod-footer">
+          <div class="prod-price">NPR 95,000 <span>onwards</span></div>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-thumb pt-office">
+        <span class="prod-tag new">New</span>
+        <button class="prod-wishlist">♡</button>
+        <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" style="width:80%;height:auto;margin:auto">
+          <rect x="15" y="60" width="170" height="16" rx="4" fill="#78808A"/>
+          <rect x="15" y="72" width="170" height="10" rx="2" fill="#606870"/>
+          <rect x="80" y="82" width="10" height="40" rx="4" fill="#505860"/>
+          <rect x="110" y="82" width="10" height="40" rx="4" fill="#505860"/>
+          <rect x="15" y="30" width="80" height="32" rx="4" fill="#8890A0" opacity="0.6"/>
+          <rect x="105" y="22" width="80" height="40" rx="4" fill="#8890A0" opacity="0.4"/>
+          <rect x="60" y="118" width="80" height="6" rx="3" fill="#3C4450"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="prod-category">Office</div>
+        <div class="prod-name">Executive L-Shape Desk</div>
+        <div class="prod-mat">Engineered wood · Steel legs</div>
+        <div class="prod-footer">
+          <div class="prod-price">NPR 42,000 <span>onwards</span></div>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-thumb pt-outdoor">
+        <button class="prod-wishlist">♡</button>
+        <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" style="width:80%;height:auto;margin:auto">
+          <rect x="20" y="80" width="160" height="12" rx="4" fill="#5A7050"/>
+          <rect x="20" y="88" width="160" height="6" rx="2" fill="#466040"/>
+          <rect x="25" y="94" width="12" height="34" rx="4" fill="#3A5030"/>
+          <rect x="163" y="94" width="12" height="34" rx="4" fill="#3A5030"/>
+          <rect x="25" y="48" width="12" height="44" rx="4" fill="#3A5030"/>
+          <rect x="163" y="48" width="12" height="44" rx="4" fill="#3A5030"/>
+          <rect x="25" y="48" width="150" height="10" rx="4" fill="#6A8860"/>
+          <rect x="25" y="60" width="150" height="8" rx="2" fill="#5A7850" opacity="0.7"/>
+          <rect x="25" y="70" width="150" height="8" rx="2" fill="#5A7850" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <div class="prod-category">Outdoor</div>
+        <div class="prod-name">Garden Teak Lounger</div>
+        <div class="prod-mat">Grade A teak · Weather treated</div>
+        <div class="prod-footer">
+          <div class="prod-price">NPR 28,000 <span>per unit</span></div>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" style="background: var(--forest); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:32px; gap:16px;">
+      <div style="font-size:2.5rem;">✏️</div>
+      <h3 style="font-family:'Playfair Display',serif; color:var(--white); font-size:1.2rem;">Custom Design</h3>
+      <p style="color:rgba(255,255,255,0.65); font-size:0.85rem; line-height:1.6;">Have something unique in mind? Our team will bring your vision to life.</p>
+      <a href="#contact" class="btn-primary" style="margin-top:8px; font-size:0.8rem; padding:10px 24px;">Start Designing</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════ WHY US ════ -->
+<section class="why-us">
+  <div class="section-label">Our Strengths</div>
+  <h2 class="section-title">Why Customers Choose <em>Mannat</em></h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🌿</div>
+      <h3>Sustainable Materials</h3>
+      <p>We only use timber from certified, sustainably managed forests across Nepal and India, ensuring our craft doesn't cost the earth.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🔨</div>
+      <h3>Master Craftsmen</h3>
+      <p>Our team of skilled artisans brings decades of traditional Nepali woodworking expertise to every piece, blending heritage with modern technique.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📏</div>
+      <h3>Made-to-Measure</h3>
+      <p>Every order can be tailored to your exact dimensions, finish, and style preferences — no catalogue constraints.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🏨</div>
+      <h3>Commercial Expertise</h3>
+      <p>We have completed fit-outs for hotels, resorts, and restaurants across the eastern region. Bulk orders, no problem.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ PROJECTS ════ -->
+<section class="projects" id="projects">
+  <div class="section-label">Our Work</div>
+  <h2 class="section-title">Spaces We've <em>Transformed</em></h2>
+  <p class="section-sub">From boutique hotels in the hills to restaurants in the city — we bring the same care to every project.</p>
+  <div class="proj-grid">
+    <div class="proj-card span-row">
+      <div class="proj-img pv-hotel" style="height:100%; min-height:540px; display:flex; align-items:flex-end; padding:0; position:relative;">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" style="width:80%;height:80%;opacity:0.25">
+            <rect x="40" y="60" width="220" height="280" rx="4" fill="#8090B0"/>
+            <rect x="60" y="100" width="80" height="60" rx="4" fill="#A0B0C8"/>
+            <rect x="160" y="100" width="80" height="60" rx="4" fill="#A0B0C8"/>
+            <rect x="60" y="180" width="80" height="60" rx="4" fill="#A0B0C8"/>
+            <rect x="160" y="180" width="80" height="60" rx="4" fill="#A0B0C8"/>
+            <rect x="110" y="270" width="80" height="70" rx="0" fill="#6878A0"/>
+          </svg>
+        </div>
+        <div class="proj-overlay" style="opacity:1;background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 50%);">
+          <div class="proj-info">
+            <h4>Park Regency Hotel</h4>
+            <span>Biratnagar · 80-room complete fit-out</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img pv-resort" style="height:260px; display:flex; align-items:flex-end;">
+        <div class="proj-overlay" style="opacity:1;background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 55%);">
+          <div class="proj-info"><h4>Illam Tea Resort</h4><span>Illam · Lounge & dining furniture</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img pv-home" style="height:260px; display:flex; align-items:flex-end;">
+        <div class="proj-overlay" style="opacity:1;background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 55%);">
+          <div class="proj-info"><h4>Private Residence</h4><span>Damak · Full home interior</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img pv-rest" style="height:260px; display:flex; align-items:flex-end;">
+        <div class="proj-overlay" style="opacity:1;background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 55%);">
+          <div class="proj-info"><h4>Bhojan Griha Restaurant</h4><span>Jhapa · 60-cover dining setup</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img pv-office2" style="height:260px; display:flex; align-items:flex-end;">
+        <div class="proj-overlay" style="opacity:1;background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 55%);">
+          <div class="proj-info"><h4>Corporate Office</h4><span>Birtamod · Complete office furniture</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ TESTIMONIALS ════ -->
+<section class="testimonials">
+  <div class="section-label">What Clients Say</div>
+  <h2 class="section-title">Stories of <em>Satisfaction</em></h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Mannat Furniture transformed our hotel lobby completely. The quality of the teak pieces is outstanding, and they delivered on time despite a tight deadline. Highly recommend for commercial projects."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">RK</div>
+        <div>
+          <div class="testi-name">Ramesh Khanal</div>
+          <div class="testi-loc">Hotel Manager, Biratnagar</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"We ordered custom bedroom furniture for our new home. The craftsmanship is beautiful and the team was very patient in understanding exactly what we wanted. Worth every rupee."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">SP</div>
+        <div>
+          <div class="testi-name">Sunita Pradhan</div>
+          <div class="testi-loc">Homeowner, Damak</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Our restaurant needed furniture that was both durable and stylish. Mannat delivered 60 dining sets on time, and they look absolutely stunning. Our guests regularly compliment the atmosphere."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">BT</div>
+        <div>
+          <div class="testi-name">Bikram Tamang</div>
+          <div class="testi-loc">Restaurant Owner, Birtamod</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ PROCESS ════ -->
+<section class="process" id="process">
+  <div style="text-align:center; margin-bottom:0;">
+    <div class="section-label" style="justify-content:center; display:flex;">How We Work</div>
+    <h2 class="section-title" style="text-align:center;">From Idea to <em>Your Doorstep</em></h2>
+    <p class="section-sub" style="margin: 14px auto 0; text-align:center;">Our streamlined 5-step process ensures you get exactly what you envisioned, with no surprises.</p>
+  </div>
+  <div class="process-steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Consultation</h4>
+      <p>Tell us about your space, style, and budget. We listen and understand.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Design & Quote</h4>
+      <p>Our team prepares detailed designs and a transparent price quote.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>Approval</h4>
+      <p>Review, request changes, and confirm. No work starts without your sign-off.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h4>Crafting</h4>
+      <p>Our artisans build your furniture with precision at our Damak workshop.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <h4>Delivery & Setup</h4>
+      <p>We deliver and install everywhere in Nepal. Your space, perfected.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════ ABOUT US ════ -->
+<section style="background: var(--white); padding: 80px 48px;" id="about">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; max-width:1100px; margin:0 auto; align-items:center;">
+    <div>
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title" style="font-size:2.2rem;">Born in Damak, <em>Built for Nepal</em></h2>
+      <p style="color:var(--text-mid); font-size:0.95rem; line-height:1.8; margin-top:16px;">
+        Mannat Furniture was founded by brothers <strong>Manish Panday</strong> and <strong>Manoj Panday</strong> in the heart of Damak, Jhapa — with a single mission: to make beautifully crafted, durable furniture accessible to every Nepali home, hotel, and business.
+      </p>
+      <p style="color:var(--text-mid); font-size:0.95rem; line-height:1.8; margin-top:14px;">
+        Growing up surrounded by the lush forests of eastern Nepal, we developed a deep respect for natural materials and skilled craftsmanship. Today, our workshop in Damak brings together traditional Nepali woodworking techniques and contemporary design to create furniture that lasts a lifetime.
+      </p>
+      <p style="color:var(--text-mid); font-size:0.95rem; line-height:1.8; margin-top:14px;">
+        From a single dining table to a full hotel fit-out — every order gets the same personal attention. That is the Mannat promise.
+      </p>
+      <div style="display:flex; gap:48px; margin-top:36px;">
+        <div>
+          <div style="font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:700; color:var(--forest);">100%</div>
+          <div style="font-size:0.8rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.08em; margin-top:4px;">Handcrafted</div>
+        </div>
+        <div>
+          <div style="font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:700; color:var(--forest);">77+</div>
+          <div style="font-size:0.8rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.08em; margin-top:4px;">Districts Served</div>
+        </div>
+        <div>
+          <div style="font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:700; color:var(--forest);">5yr</div>
+          <div style="font-size:0.8rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.08em; margin-top:4px;">Warranty</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+      <div style="background:var(--forest); border-radius:8px; padding:32px; text-align:center;">
+        <div style="width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--forest);margin:0 auto 16px;">MP</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);font-weight:600;">Manish Panday</div>
+        <div style="font-size:0.78rem;color:var(--gold);letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;">Co-Founder</div>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.6);line-height:1.6;margin-top:12px;">Leads design, client relations, and product development at Mannat.</p>
+      </div>
+      <div style="background:var(--walnut); border-radius:8px; padding:32px; text-align:center; margin-top:24px;">
+        <div style="width:64px;height:64px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--walnut);margin:0 auto 16px;">MP</div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);font-weight:600;">Manoj Panday</div>
+        <div style="font-size:0.78rem;color:var(--cream);letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;">Co-Founder</div>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.6;margin-top:12px;">Oversees workshop operations, quality control, and delivery logistics.</p>
+      </div>
+      <div style="background:var(--sand); border-radius:8px; padding:24px; grid-column:span 2;">
+        <div style="font-size:0.78rem;color:var(--text-light);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">Our Mission</div>
+        <p style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--text-dark);line-height:1.6;font-style:italic;">"To craft furniture that Nepali families and businesses are proud to own — made locally, built to last."</p>
+        <div style="font-size:0.78rem;color:var(--walnut);font-weight:600;margin-top:10px;">— Manish &amp; Manoj Panday, Founders</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CTA STRIP ════ -->
+<div class="cta-strip">
+  <h2>Ready to Furnish Your <em>Dream Space?</em></h2>
+  <div class="cta-strip-actions">
+    <a href="#contact" class="btn-white">Get a Free Quote</a>
+    <a href="tel:+977-000-000000" class="btn-outline-white">📞 WhatsApp Us</a>
+  </div>
+</div>
+
+<!-- ════ CONTACT ════ -->
+<section style="background: var(--cream); padding: 80px 48px;" id="contact">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; max-width:1100px; margin:0 auto;">
+    <div>
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title" style="font-size:2.2rem;">Let's Build Something <em>Beautiful</em></h2>
+      <p class="section-sub" style="font-size:0.9rem;">Whether you have a small bedroom project or a large hotel fit-out, we'd love to hear from you. Reach out and we'll respond within 24 hours.</p>
+      <div style="margin-top:36px; display:flex; flex-direction:column; gap:20px;">
+        <div style="display:flex; align-items:flex-start; gap:16px;">
+          <div style="font-size:1.4rem; margin-top:2px;">📍</div>
+          <div>
+            <div style="font-weight:600; font-size:0.9rem; margin-bottom:4px;">Workshop & Showroom</div>
+            <div style="color:var(--text-light); font-size:0.875rem; line-height:1.6;">Mannat Furniture<br>Damak-5, Jhapa<br>Bagmati Province, Nepal</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:16px;">
+          <div style="font-size:1.4rem; margin-top:2px;">📞</div>
+          <div>
+            <div style="font-weight:600; font-size:0.9rem; margin-bottom:4px;">Phone & WhatsApp</div>
+            <div style="color:var(--text-light); font-size:0.875rem;">+977-XXX-XXXXXXX</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:16px;">
+          <div style="font-size:1.4rem; margin-top:2px;">✉️</div>
+          <div>
+            <div style="font-weight:600; font-size:0.9rem; margin-bottom:4px;">Email</div>
+            <div style="color:var(--text-light); font-size:0.875rem;">info@mannatfurniture.com.np</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:16px;">
+          <div style="font-size:1.4rem; margin-top:2px;">🕐</div>
+          <div>
+            <div style="font-weight:600; font-size:0.9rem; margin-bottom:4px;">Showroom Hours</div>
+            <div style="color:var(--text-light); font-size:0.875rem;">Sunday – Friday: 9:00 AM – 6:00 PM<br>Saturday: 10:00 AM – 4:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background:var(--white); border-radius:8px; padding:40px; box-shadow: 0 4px 24px rgba(0,0,0,0.07);">
+      <h3 style="font-family:'Playfair Display',serif; font-size:1.4rem; margin-bottom:24px;">Send Us a Message</h3>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div>
+            <label style="font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-mid); display:block; margin-bottom:6px;">Full Name</label>
+            <input type="text" placeholder="Your name" style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; background:var(--cream); transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='var(--sand-dark)'"/>
+          </div>
+          <div>
+            <label style="font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-mid); display:block; margin-bottom:6px;">Phone</label>
+            <input type="tel" placeholder="+977-XXX-XXXXXXX" style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; background:var(--cream); transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='var(--sand-dark)'"/>
+          </div>
+        </div>
+        <div>
+          <label style="font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-mid); display:block; margin-bottom:6px;">Project Type</label>
+          <select style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; background:var(--cream); color:var(--text-dark); appearance:none; cursor:pointer;">
+            <option>Home Furniture</option>
+            <option>Hotel / Resort</option>
+            <option>Restaurant / Café</option>
+            <option>Office</option>
+            <option>Custom Design</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-mid); display:block; margin-bottom:6px;">Message</label>
+          <textarea rows="4" placeholder="Tell us about your project, dimensions, style preferences, budget range..." style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; resize:vertical; background:var(--cream); transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='var(--sand-dark)'"></textarea>
+        </div>
+        <button onclick="alert('Thank you! We will contact you within 24 hours.')" class="btn-primary" style="width:100%; padding:14px; font-size:0.9rem; border-radius:4px; cursor:pointer; border:none;">Send Message →</button>
+        <p style="font-size:0.75rem; color:var(--text-light); text-align:center;">We typically respond within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="nav-logo-text">Mannat Furniture</span>
+      <div style="color:var(--gold); font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">Damak, Jhapa · Nepal</div>
+      <p>Founded by Manish Panday &amp; Manoj Panday in Damak, Jhapa — Mannat Furniture crafts premium furniture for homes, hotels, resorts, restaurants and offices, delivered anywhere in Nepal.</p>
+      <div class="footer-social">
+        <button class="social-btn">f</button>
+        <button class="social-btn">in</button>
+        <button class="social-btn">📷</button>
+        <button class="social-btn">▶</button>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Collections</h4>
+      <ul>
+        <li><a href="#">Living Room</a></li>
+        <li><a href="#">Bedroom</a></li>
+        <li><a href="#">Dining & Kitchen</a></li>
+        <li><a href="#">Hotel & Resort</a></li>
+        <li><a href="#">Office & Study</a></li>
+        <li><a href="#">Outdoor</a></li>
+        <li><a href="#">Custom Orders</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Craftsmen</a></li>
+        <li><a href="#">Projects Portfolio</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Get a Quote</a></li>
+        <li><a href="#">Delivery Info</a></li>
+        <li><a href="#">Warranty Policy</a></li>
+        <li><a href="#">Care Guide</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Mannat Furniture. Founded by Manish Panday &amp; Manoj Panday. Damak, Jhapa, Nepal.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Filter tabs
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Wishlist toggle
+  document.querySelectorAll('.prod-wishlist').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.textContent = this.textContent === '♡' ? '♥' : '♡';
+      this.style.color = this.textContent === '♥' ? '#C0392B' : '';
+    });
+  });
+
+  // Smooth nav highlight
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 20) {
+      nav.style.boxShadow = '0 4px 24px rgba(0,0,0,0.25)';
+    } else {
+      nav.style.boxShadow = '0 2px 16px rgba(0,0,0,0.18)';
+    }
+  });
+</script>
+</body>
+</html>
