@@ -865,7 +865,7 @@
 </section>
 
 <!-- ════ WHY US ════ -->
-<section class="why-us">
+<section class="why-us" id="why-us">
   <div class="section-label">Our Strengths</div>
   <h2 class="section-title">Why Customers Choose <em>Mannat</em></h2>
   <div class="why-grid">
@@ -1084,7 +1084,7 @@
   <h2>Ready to Furnish Your <em>Dream Space?</em></h2>
   <div class="cta-strip-actions">
     <a href="#contact" class="btn-white">Get a Free Quote</a>
-    <a href="tel:+977-000-000000" class="btn-outline-white">📞 WhatsApp Us</a>
+    <a href="#" id="cta-whatsapp" class="btn-outline-white">📞 WhatsApp Us</a>
   </div>
 </div>
 
@@ -1100,48 +1100,50 @@
           <div style="font-size:1.4rem; margin-top:2px;">📍</div>
           <div>
             <div style="font-weight:600; font-size:0.9rem; margin-bottom:4px;">Workshop & Showroom</div>
-            <div style="color:var(--text-light); font-size:0.875rem; line-height:1.6;">Mannat Furniture<br>Damak-5, Jhapa<br>Bagmati Province, Nepal</div>
+            <div style="color:var(--text-light); font-size:0.875rem; line-height:1.6;" id="display-address">Mannat Furniture<br>Damak-5, Jhapa<br>Bagmati Province, Nepal</div>
           </div>
         </div>
         <div style="display:flex; align-items:flex-start; gap:16px;">
           <div style="font-size:1.4rem; margin-top:2px;">📞</div>
           <div>
             <div style="font-weight:600; font-size:0.9rem; margin-bottom:4px;">Phone & WhatsApp</div>
-            <div style="color:var(--text-light); font-size:0.875rem;">+977-XXX-XXXXXXX</div>
+            <div style="color:var(--text-light); font-size:0.875rem;" id="display-phone">+977-XXX-XXXXXXX</div>
           </div>
         </div>
         <div style="display:flex; align-items:flex-start; gap:16px;">
           <div style="font-size:1.4rem; margin-top:2px;">✉️</div>
           <div>
             <div style="font-weight:600; font-size:0.9rem; margin-bottom:4px;">Email</div>
-            <div style="color:var(--text-light); font-size:0.875rem;">info@mannatfurniture.com.np</div>
+            <div style="color:var(--text-light); font-size:0.875rem;" id="display-email">info@mannatfurniture.com.np</div>
           </div>
         </div>
         <div style="display:flex; align-items:flex-start; gap:16px;">
           <div style="font-size:1.4rem; margin-top:2px;">🕐</div>
           <div>
             <div style="font-weight:600; font-size:0.9rem; margin-bottom:4px;">Showroom Hours</div>
-            <div style="color:var(--text-light); font-size:0.875rem;">Sunday – Friday: 9:00 AM – 6:00 PM<br>Saturday: 10:00 AM – 4:00 PM</div>
+            <div style="color:var(--text-light); font-size:0.875rem;" id="display-hours">Sunday – Friday: 9:00 AM – 6:00 PM<br>Saturday: 10:00 AM – 4:00 PM</div>
           </div>
         </div>
       </div>
     </div>
     <div style="background:var(--white); border-radius:8px; padding:40px; box-shadow: 0 4px 24px rgba(0,0,0,0.07);">
       <h3 style="font-family:'Playfair Display',serif; font-size:1.4rem; margin-bottom:24px;">Send Us a Message</h3>
-      <div style="display:flex; flex-direction:column; gap:16px;">
+      <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display:flex; flex-direction:column; gap:16px;">
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
           <div>
             <label style="font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-mid); display:block; margin-bottom:6px;">Full Name</label>
-            <input type="text" placeholder="Your name" style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; background:var(--cream); transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='var(--sand-dark)'"/>
+            <input required type="text" name="name" placeholder="Your name" style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; background:var(--cream); transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='var(--sand-dark)'"/>
           </div>
           <div>
             <label style="font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-mid); display:block; margin-bottom:6px;">Phone</label>
-            <input type="tel" placeholder="+977-XXX-XXXXXXX" style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; background:var(--cream); transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='var(--sand-dark)'"/>
+            <input required type="tel" name="phone" placeholder="+977-XXX-XXXXXXX" style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; background:var(--cream); transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='var(--sand-dark)'"/>
           </div>
         </div>
         <div>
           <label style="font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-mid); display:block; margin-bottom:6px;">Project Type</label>
-          <select style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; background:var(--cream); color:var(--text-dark); appearance:none; cursor:pointer;">
+          <select name="project_type" style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; background:var(--cream); color:var(--text-dark); appearance:none; cursor:pointer;">
             <option>Home Furniture</option>
             <option>Hotel / Resort</option>
             <option>Restaurant / Café</option>
@@ -1151,11 +1153,12 @@
         </div>
         <div>
           <label style="font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-mid); display:block; margin-bottom:6px;">Message</label>
-          <textarea rows="4" placeholder="Tell us about your project, dimensions, style preferences, budget range..." style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; resize:vertical; background:var(--cream); transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='var(--sand-dark)'"></textarea>
+          <textarea required rows="4" name="message" placeholder="Tell us about your project, dimensions, style preferences, budget range..." style="width:100%; padding:12px 14px; border:1.5px solid var(--sand-dark); border-radius:4px; font-size:0.875rem; outline:none; font-family:inherit; resize:vertical; background:var(--cream); transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--forest)'" onblur="this.style.borderColor='var(--sand-dark)'"></textarea>
         </div>
-        <button onclick="alert('Thank you! We will contact you within 24 hours.')" class="btn-primary" style="width:100%; padding:14px; font-size:0.9rem; border-radius:4px; cursor:pointer; border:none;">Send Message →</button>
+        <button type="submit" id="contactSubmitBtn" class="btn-primary" style="width:100%; padding:14px; font-size:0.9rem; border-radius:4px; cursor:pointer; border:none;">Send Message →</button>
+        <p id="contactFormStatus" style="font-size:0.85rem; text-align:center; display:none;"></p>
         <p style="font-size:0.75rem; color:var(--text-light); text-align:center;">We typically respond within 24 hours.</p>
-      </div>
+      </form>
     </div>
   </div>
 </section>
@@ -1168,53 +1171,48 @@
       <div style="color:var(--gold); font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase;">Damak, Jhapa · Nepal</div>
       <p>Founded by Manish Panday &amp; Manoj Panday in Damak, Jhapa — Mannat Furniture crafts premium furniture for homes, hotels, resorts, restaurants and offices, delivered anywhere in Nepal.</p>
       <div class="footer-social">
-        <button class="social-btn">f</button>
-        <button class="social-btn">in</button>
-        <button class="social-btn">📷</button>
-        <button class="social-btn">▶</button>
+        <a class="social-btn" id="social-fb" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;">f</a>
+        <a class="social-btn" id="social-ig" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;">📷</a>
+        <a class="social-btn" id="social-wa" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;">💬</a>
       </div>
     </div>
     <div class="footer-col">
       <h4>Collections</h4>
       <ul>
-        <li><a href="#">Living Room</a></li>
-        <li><a href="#">Bedroom</a></li>
-        <li><a href="#">Dining & Kitchen</a></li>
-        <li><a href="#">Hotel & Resort</a></li>
-        <li><a href="#">Office & Study</a></li>
-        <li><a href="#">Outdoor</a></li>
-        <li><a href="#">Custom Orders</a></li>
+        <li><a href="#products">Living Room</a></li>
+        <li><a href="#products">Bedroom</a></li>
+        <li><a href="#products">Dining & Kitchen</a></li>
+        <li><a href="#products">Hotel & Resort</a></li>
+        <li><a href="#products">Office & Study</a></li>
+        <li><a href="#products">Outdoor</a></li>
+        <li><a href="#contact">Custom Orders</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
       <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Our Craftsmen</a></li>
-        <li><a href="#">Projects Portfolio</a></li>
-        <li><a href="#">Sustainability</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#about">Our Craftsmen</a></li>
+        <li><a href="#projects">Projects Portfolio</a></li>
+        <li><a href="#why-us">Sustainability</a></li>
+        <li><a href="#contact">Careers</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Support</h4>
       <ul>
-        <li><a href="#">Get a Quote</a></li>
-        <li><a href="#">Delivery Info</a></li>
-        <li><a href="#">Warranty Policy</a></li>
-        <li><a href="#">Care Guide</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#contact">Get a Quote</a></li>
+        <li><a href="#process">Delivery Info</a></li>
+        <li><a href="#why-us">Warranty Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <p>© 2025 Mannat Furniture. Founded by Manish Panday &amp; Manoj Panday. Damak, Jhapa, Nepal.</p>
     <div class="footer-bottom-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Sitemap</a>
+      <a href="#" onclick="event.preventDefault()">Privacy Policy</a>
+      <a href="#" onclick="event.preventDefault()">Terms of Use</a>
     </div>
   </div>
 </footer>
@@ -1246,6 +1244,60 @@
       nav.style.boxShadow = '0 2px 16px rgba(0,0,0,0.18)';
     }
   });
+  // Contact form submission (Netlify Forms, AJAX so the page doesn't reload)
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('contactSubmitBtn');
+      const status = document.getElementById('contactFormStatus');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      const formData = new FormData(contactForm);
+      fetch('/', { method: 'POST', body: new URLSearchParams(formData) })
+        .then(() => {
+          status.style.display = 'block';
+          status.style.color = 'var(--forest, green)';
+          status.textContent = 'Thank you! We will contact you within 24 hours.';
+          contactForm.reset();
+          btn.textContent = 'Send Message →';
+          btn.disabled = false;
+        })
+        .catch(() => {
+          status.style.display = 'block';
+          status.style.color = '#C0392B';
+          status.textContent = 'Something went wrong. Please WhatsApp or call us instead.';
+          btn.textContent = 'Send Message →';
+          btn.disabled = false;
+        });
+    });
+  }
+
+  // Load live company info (edited via /admin) into the page
+  fetch('/content/settings/company.json')
+    .then(r => r.json())
+    .then(c => {
+      const setText = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+      setText('display-phone', c.phone);
+      setText('display-email', c.email);
+      if (c.address1 || c.address2) {
+        const addrEl = document.getElementById('display-address');
+        if (addrEl) addrEl.innerHTML = 'Mannat Furniture<br>' + (c.address1 || '') + '<br>' + (c.address2 || '');
+      }
+      if (c.hours) {
+        const hoursEl = document.getElementById('display-hours');
+        if (hoursEl) hoursEl.innerHTML = 'Sunday – Friday: ' + c.hours.weekdays + '<br>Saturday: ' + c.hours.saturday;
+      }
+      const waLink = document.getElementById('cta-whatsapp');
+      if (waLink && c.whatsapp) waLink.href = 'https://wa.me/' + c.whatsapp.replace(/[^0-9]/g, '');
+      const fb = document.getElementById('social-fb');
+      if (fb && c.facebook) fb.href = c.facebook;
+      const ig = document.getElementById('social-ig');
+      if (ig && c.instagram) ig.href = c.instagram;
+      const wa = document.getElementById('social-wa');
+      if (wa && c.whatsapp) wa.href = 'https://wa.me/' + c.whatsapp.replace(/[^0-9]/g, '');
+    })
+    .catch(() => { /* keep placeholder text if file isn't reachable yet */ });
 </script>
 </body>
 </html>
