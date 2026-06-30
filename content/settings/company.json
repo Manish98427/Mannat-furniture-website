@@ -1,0 +1,15 @@
+{
+  "name": "Mannat Furniture",
+  "tagline": "Furniture Built to Last a Lifetime",
+  "phone": "+977-XXX-XXXXXXX",
+  "email": "info@mannatfurniture.com.np",
+  "address1": "Damak-5, Jhapa",
+  "address2": "Koshi Province, Nepal",
+  "facebook": "",
+  "instagram": "",
+  "whatsapp": "977XXXXXXXXXX",
+  "hours": {
+    "weekdays": "9:00 AM – 6:00 PM",
+    "saturday": "10:00 AM – 4:00 PM"
+  }
+}
